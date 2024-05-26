@@ -10,7 +10,6 @@
     </div>
     <div v-else>
       <h3></h3>
-
       <p>Current Player: {{ currentPlayer }}</p>
     </div>
   </div>

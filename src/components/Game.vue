@@ -128,7 +128,7 @@ export default defineComponent({
       }
     },
     startNewGame() {
-      window.location.reload();
+      this.$emit('reset-game');
     },
     playAgain() {
       this.items.forEach((item) => {
@@ -137,14 +137,6 @@ export default defineComponent({
       this.currentPlayer = this.player1;
       this.gameOver = false;
       this.winner = null;
-    },
-
-    setGameState(gameState) {
-      this.items = gameState.items;
-      this.score = gameState.score;
-      this.gameOver = gameState.gameOver;
-      this.winner = gameState.winner;
-      this.currentPlayer = gameState.currentPlayer;
     },
   },
 });

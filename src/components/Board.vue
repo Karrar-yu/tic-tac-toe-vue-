@@ -18,6 +18,7 @@
         :player2="player2"
         :player1Color="'lightgreen'"
         :player2Color="'red'"
+        @reset-game="resetGame"
       />
     </section>
   </div>
@@ -45,6 +46,11 @@ export default defineComponent({
       } else {
         alert("Please enter both player names.");
       }
+    },
+    resetGame() {
+      this.player1 = "";
+      this.player2 = "";
+      this.gameStarted = false;
     },
   },
 });
